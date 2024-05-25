@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    /* above three properties go along each other */
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 60px;
+}
+nav a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+nav ul li{
+    list-style: none;
+}
+
+header nav ul{
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+}
+
+#banner{
+    background-image: url(./assets/main.jpg);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#banner h2{
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+
+}
+#banner h3{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 1rem;
+}
+#banner button{
+    font-size: 1.3rem;
+    padding: 20px 40px;
+    color: white;
+    font-weight: bold;
+    background-color: #006494;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+/* destination-tagline styling */
+#destination-tagline {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#destination-tagline hr{
+    width: 45%;
+    height: 5px;
+    margin: 0 auto;
+    background-color: #006494;
+    /* unable to color the hr tag, look into it about how to fill it? */
+    /* done above */
+}
+
+/* destination section styling starts here */
+#destination{
+    margin: 30px 0px;
+    padding: 0 100px;
+}
+#destination-grid{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+#destination-grid div{
+    height: 350px;
+    padding: 1rem;
+}
+#destination-grid div img{
+    height: 100%;
+    width: 100%;
+
+}
+
+#destination-grid .small{
+    flex-basis: 30%;
+}
+
+#destination-grid .large{
+    flex-basis: 70%;
+}
+
+@media screen and(width<=980px){
+    #destination-grid .small{
+        flex-basis: 50%;
+    }
+    #destination-grid .large{
+        flex-basis: 50%;
+    }
+}
+@media screen and(width<=700px){
+    #destination-grid .small{
+        flex-basis: 100%;
+    }
+    #destination-grid .large{
+        flex-basis: 100%;
+    }
+}
+
+/* again the above code containing (Media queries) is not working on my computer; */
+/* also the width of the whole website is creating a width scroll bar, look into how to remove it; */
